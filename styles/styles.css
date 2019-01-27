@@ -4,7 +4,6 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-
 /***** GENERAL STYLES ******/
 
 html {
@@ -18,7 +17,7 @@ body {
 
 .wrapper {
     max-width: 1600px;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -45,15 +44,35 @@ a {
 button {
     text-transform: uppercase;
     padding: 0.25rem 0;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: bold;
-    border: none;
+    border: 1.5px solid transparent;
+    transition: border 0.15s ease-in;
+}
+
+#about button:hover,
+#blog button:hover {
+    border: 1.5px solid #f2a11c;
 }
 
 .navList li,
-footer li {
+footer li,
+#midSection li {
     display: inline-block;
     margin-left: 1rem;
+    border-bottom: 1px solid transparent;
+}
+
+nav li:hover,
+footer li:hover,
+#midSection li:hover {
+    border-bottom: 1px solid #f2a11c;
+}
+
+nav li,
+footer li,
+#midSection li {
+    transition: border 0.25s ease-in;
 }
 
 .navList ul,
@@ -61,7 +80,6 @@ footer ul {
     text-align: center;
     color: #fff;
 }
-
 
 h2 {
     font-size: 1.8rem;
@@ -71,49 +89,47 @@ h2 {
 
 /* HEADER STYLES*/
 
-.fullbleed {
+header .fullbleed {
     background: url('../assets/image1.jpg');
     background-size: cover;
     background-position: 50% 0%;
-}
-
-
-header .wrapper{
     min-height: 100vh;
     /* accomodates for items in the header when the page gets too small */
 }
-
-.headerText {
-    padding-top: 20%;
-    padding-left: 35%;
-}
-
-h1 {
-    font-size: 5.25rem;
-    max-width: 90%;
-    margin: 0;
-    float: left;
-    /* margin-top: 4 */
-    /* margin-bottom: 12.4rem; */
-    /* margin-left: 37%; */
-    /* margin-left: 28.5%; */
-    /* margin-left: 16rem; */
-}
-
-.navIcons {
-    max-width: 10%;
-    float: right;
-    margin-top: 1rem;
-}
-
-/* when container gets too small floats will stack on top of each other */
-/* to fix this - adjust the width of the container??? */
-
 
 .navList ul {
     padding-top: 1rem;
 }
 
+.headerText {
+    padding-top: 8.5rem;
+    padding-left: 19.25rem;
+    padding-right: 3rem;
+}
+
+h1 {
+    font-size: 5.25rem;
+    max-width: 90%;
+    float: left;
+    margin: 0;
+}
+
+.navIcons {
+    max-width: 10%;
+    float: right;
+    margin-top: 1.25rem;
+}
+
+.navIcons li {
+    transition: color 0.25s ease-in;
+}
+
+.navIcons li:hover {
+    color: #fff;
+}
+
+/* when container gets too small floats will stack on top of each other */
+/* to fix this - adjust the width of the container??? */
 
 /*  ABOUT SECTION STYLES */
 
@@ -129,7 +145,7 @@ h1 {
 }
 
 .galleryText {
-    padding: 5rem 3rem 0 3rem;
+    padding: 5rem 3rem 0 5rem;
 }
 
 .gallery Img {
@@ -142,27 +158,29 @@ section button {
     width: 30%;
 }
 
-/*   SECTION */
+/* BLOG SECTION */
 #blog .fullbleed{
     background: #f4f4f4;
-}
-
-#blog .wrapper {
-    padding: 4rem 0 4rem 2.75rem;
+    padding: 4rem 2rem 4rem 6.5rem;
 }
 
 #blog img {
     float: left;
-    margin-right: 1.5rem;
-    max-width: calc(26% - 0.75rem);
+    margin-right: 2rem;
+    max-width: calc(26% - 1rem);
 }
 
 .blogText {
-    max-width: calc(74% - 0.75rem);
+    max-width: calc(74% - 1rem);
     /* 5rem due to the margin added to img and padding added to the parent */
     float: left;
     line-height: 1.45;
-    margin-top: -0.38rem;
+    margin-top: -0.425rem;
+}
+
+.blogText p {
+    margin-top: 0.6rem;
+    margin-bottom: 0.65rem;
 }
 
 .blogText button {
@@ -170,12 +188,130 @@ section button {
     width: 17%;
 }
 
+/* SECTION WITH THE BACKGROUND */
+
+#midSection .fullbleed {
+    background-image: url('../assets/image5.jpg');
+    background-size: cover;
+}
+
+#midSection ul {
+    text-align: center;
+    padding: 7.25rem 0 6.25rem 0;
+    /* padding: 12rem 0 10rem 0; */
+}
+
+#midSection a {
+    padding: 0;
+}
+
+#midSection i {
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+#midSection p {
+    color: #f2a11c;
+    margin: 0;
+}
+
+/*  THE GRAM SECTION */
+
+#gram h2 {
+    text-align: center;
+    margin: 3.5rem 0;
+}
+
+#gram .gramWrapper {
+    margin-bottom: 12%;
+    /* % because it should scale with the wrapper */
+}
+
+#gram .gramWrapper img:nth-child(2){
+    margin: 0 3%;
+    /* % because it should scale with the wrapper */
+}
+
+#gram img {
+    display: block;
+    float: left;
+    width: calc((100% - 6%) / 3);
+}
 
 
 /*  FOOTER STYLES */
 
-footer button {
+footer {
+    background: #222;
+}
+
+.contactInfo,
+.stayUpdated {
+    float: left;
+    margin-bottom: 3.5rem;
+}
+
+.contactInfo {
+    width: 51%
+}
+
+.stayUpdated {
+    width: 49%;
+}
+
+.stayUpdated input[type="text"],
+.stayUpdated button {
+    padding: 0.3rem 0;
+    font-size: 0.8rem;
+    float: left;
+    margin-top: 0.25rem;
+}
+
+.stayUpdated input[type="text"] {
+    width: 75%;
+    padding-left: 5%;
+}
+
+.stayUpdated button {
+    width: 25%;
     background: #f2a11c;
     color: #222;
+    padding: 0.225rem 0;
+    border: 2px solid transparent;
 }
+
+.stayUpdated button:hover {
+    border: 2px solid #fff;
+}
+
+
+footer h2 {
+    color: #f2a11c;
+    font-size: 1rem;
+}
+
+footer ul {
+    text-transform: uppercase;
+    padding-top: 4rem;
+    margin-bottom: 1.25rem;
+}
+
+footer p {
+    color: #fff;
+    margin: 0;
+}
+
+.copyright {
+    background: #000;
+    text-align: center;
+    padding: 0.125rem 0;
+}
+
+.copyright p {
+    margin: 0;
+    color: grey;
+}
+
+/*  HOVER EFFECTS */
+
 
