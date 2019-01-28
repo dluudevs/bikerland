@@ -4,6 +4,10 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+/*  QUESTIONS */
+/* did i do accessbility correctly? */
+/* larger monitors dont display the same result as my laptop */
+
 /***** GENERAL STYLES ******/
 
 html {
@@ -38,7 +42,8 @@ ul {
 a {
     text-decoration: none;
     color: inherit;
-    padding: 0.5rem;
+    padding: 1rem 0.5rem 0 0.5rem;
+    display: inline-block;
 }
 
 button {
@@ -97,9 +102,6 @@ header .fullbleed {
     /* accomodates for items in the header when the page gets too small */
 }
 
-.navList ul {
-    padding-top: 1rem;
-}
 
 .headerText {
     padding-top: 8.5rem;
@@ -118,6 +120,11 @@ h1 {
     max-width: 10%;
     float: right;
     margin-top: 1.25rem;
+}
+
+.navIcons a {
+    padding-bottom: 0.25rem;
+    padding-top: 0;
 }
 
 .navIcons li {
@@ -140,12 +147,13 @@ h1 {
 
 .galleryText,
 .gallery Img {
-    max-width: 50%;
+    width: 50%;
     float: left;
 }
 
 .galleryText {
-    padding: 5rem 3rem 0 5rem;
+    padding: 5rem 3rem 0 5rem; 
+    /* padding: 10% 17% 0 10%;  */ /* << 24" */
 }
 
 .gallery Img {
