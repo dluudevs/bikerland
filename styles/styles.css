@@ -4,11 +4,11 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-/*  QUESTIONS */
-/* larger monitors dont display the same result as my laptop */
-/* did i do accessbility correctly? */
 
 /***** GENERAL STYLES ******/
+
+/* at 8811px change to mobile */
+
 
 html {
     font-size: 20px;
@@ -20,7 +20,7 @@ body {
 }
 
 .wrapper {
-    max-width: 1600px;
+    max-width: 1200px;
     width: 80%;
     margin: 0 auto;
 }
@@ -51,13 +51,7 @@ button {
     padding: 1% 0;
     font-size: 0.8rem;
     font-weight: bold;
-    border: 1.5px solid transparent;
-    transition: border 0.15s ease-in;
-}
-
-#about button:hover,
-#blog button:hover {
-    border: 1.5px solid #f2a11c;
+    border: none;
 }
 
 .navList li,
@@ -104,12 +98,15 @@ header .fullbleed {
     position: relative;
 }
 
-
 h1 {
     font-size: 5rem;
     margin: 0;
     text-align: center;
-    padding-top: 14%;
+    padding-top: 26vh;
+}
+
+.navList .fa-bars{
+    display: none;
 }
 
 .navIcons {
@@ -117,6 +114,31 @@ h1 {
     position: absolute;
     right: 4%;
     top: 34%;
+}
+
+@media (max-width: 1103px){
+    .navIcons {
+        position: static;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .navIcons li{
+        display: inline-block;
+        position: static;
+    }
+}
+
+/* break to mobile */
+@media (max-width: 801px){
+    .navIcons {
+        display: none;
+    }
+
+    .navList .fa-bars{
+        display: block;
+    }
+
 }
 
 .navIcons a {
@@ -137,19 +159,38 @@ h1 {
 
 /*  ABOUT SECTION STYLES */
 
+.galleryText {
+    padding: 8% 5% 0 8%; 
+}
+
+@media (max-width: 1060px){
+    .galleryText {
+        padding: 7% 4% 0 5%;
+    }
+}
+
+@media (max-width: 1009px){
+    .galleryText {
+        padding: 6% 4% 0 5%;
+    }
+}
+
+@media (max-width: 902px){
+    .galleryText {
+        padding: 5% 2% 0 3%;
+    }
+}
+
 .galleryText p {
     line-height: 1.45;
     margin-top: 0;
 }
 
+
 .galleryText,
 .gallery Img {
     width: 50%;
     float: left;
-}
-
-.galleryText {
-    padding: 8% 5% 0 8%; 
 }
 
 .gallery Img {
@@ -163,25 +204,30 @@ section button {
 }
 
 /* BLOG SECTION */
+
+/* switch to mobile at max-width 908px */
 #blog .fullbleed{
     background: #f4f4f4;
     padding: 7%;
 }
 
-#blog img {
+#blog .imgContainer {
     float: left;
-    margin-right: 3%;
-    /* max-width: calc(26.5% - 1.5%); */
-    width: calc(26.5% - 1.5%);
+    width: calc(30% - 1.5%);
+    border: 1px solid red;
+}
+
+.imgContainer img {
+    width: 100%;
+    display: block;
 }
 
 .blogText {
-    /* max-width: calc(73.5% - 1.5%); */
-    width: calc(73.5% - 1.5%);
-    /* 5rem due to the margin added to img and padding added to the parent */
+    margin-left: 3%;
+    width: calc(70% - 1.5%);
     float: left;
     line-height: 1.45;
-    margin-top: -0.875%;
+    border: 1px solid blue;
 }
 
 .blogText button {
@@ -279,11 +325,6 @@ footer {
     border: 2px solid transparent;
 }
 
-.stayUpdated button:hover {
-    border: 2px solid #fff;
-}
-
-
 footer h2 {
     color: #f2a11c;
     font-size: 1rem;
@@ -311,6 +352,5 @@ footer p {
     color: grey;
 }
 
-/*  HOVER EFFECTS */
 
 
