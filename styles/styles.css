@@ -42,13 +42,13 @@ ul {
 a {
     text-decoration: none;
     color: inherit;
-    padding: 1rem 0.5rem 0 0.5rem;
+    padding: 5px 5px 0 5px;
     display: inline-block;
 }
 
 button {
     text-transform: uppercase;
-    padding: 0.25rem 0;
+    padding: 1% 0;
     font-size: 0.8rem;
     font-weight: bold;
     border: 1.5px solid transparent;
@@ -64,7 +64,7 @@ button {
 footer li,
 #midSection li {
     display: inline-block;
-    margin-left: 1rem;
+    margin-left: 3%;
     border-bottom: 1px solid transparent;
 }
 
@@ -84,6 +84,7 @@ footer li,
 footer ul {
     text-align: center;
     color: #fff;
+    padding-top: 1%;
 }
 
 h2 {
@@ -108,18 +109,18 @@ h1 {
     font-size: 5rem;
     margin: 0;
     text-align: center;
-    padding-top: 8.5rem;
+    padding-top: 14%;
 }
 
 .navIcons {
-    margin-top: 1.25rem;
+    margin-top: 2%;
     position: absolute;
-    right: 2rem;
-    top: 11rem;
+    right: 4%;
+    top: 34%;
 }
 
 .navIcons a {
-    padding-bottom: 0.1rem;
+    padding-bottom: 10%;
     padding-top: 0;
 }
 
@@ -148,8 +149,7 @@ h1 {
 }
 
 .galleryText {
-    padding: 5rem 3rem 0 5rem; 
-    /* padding: 10% 17% 0 10%;  */ /* << 24" */
+    padding: 8% 5% 0 8%; 
 }
 
 .gallery Img {
@@ -165,30 +165,26 @@ section button {
 /* BLOG SECTION */
 #blog .fullbleed{
     background: #f4f4f4;
-    padding: 4rem 2rem 4rem 6.5rem;
+    padding: 7%;
 }
 
 #blog img {
     float: left;
-    margin-right: 2rem;
-    max-width: calc(26% - 1rem);
+    margin-right: 3%;
+    /* max-width: calc(26.5% - 1.5%); */
+    width: calc(26.5% - 1.5%);
 }
 
 .blogText {
-    max-width: calc(74% - 1rem);
+    /* max-width: calc(73.5% - 1.5%); */
+    width: calc(73.5% - 1.5%);
     /* 5rem due to the margin added to img and padding added to the parent */
     float: left;
     line-height: 1.45;
-    margin-top: -0.425rem;
-}
-
-.blogText p {
-    margin-top: 0.6rem;
-    margin-bottom: 0.65rem;
+    margin-top: -0.875%;
 }
 
 .blogText button {
-    /* margin-top: 0.5rem; */
     width: 17%;
 }
 
@@ -201,8 +197,7 @@ section button {
 
 #midSection ul {
     text-align: center;
-    padding: 7.25rem 0 6.25rem 0;
-    /* padding: 12rem 0 10rem 0; */
+    padding: 16.5% 0 15.5% 0;
 }
 
 #midSection a {
@@ -223,7 +218,7 @@ section button {
 
 #gram h2 {
     text-align: center;
-    margin: 3.5rem 0;
+    margin: 7.5% 0;
 }
 
 #gram .gramWrapper {
@@ -252,11 +247,11 @@ footer {
 .contactInfo,
 .stayUpdated {
     float: left;
-    margin-bottom: 3.5rem;
+    margin-bottom: 7.5%;
 }
 
 .contactInfo {
-    width: 51%
+    width: 51%;
 }
 
 .stayUpdated {
@@ -265,10 +260,10 @@ footer {
 
 .stayUpdated input[type="text"],
 .stayUpdated button {
-    padding: 0.3rem 0;
+    padding: 1.25% 0;
     font-size: 0.8rem;
     float: left;
-    margin-top: 0.25rem;
+    margin-top: 1%;
 }
 
 .stayUpdated input[type="text"] {
@@ -280,7 +275,7 @@ footer {
     width: 25%;
     background: #f2a11c;
     color: #222;
-    padding: 0.225rem 0;
+    padding: 0.9% 0;
     border: 2px solid transparent;
 }
 
@@ -296,8 +291,8 @@ footer h2 {
 
 footer ul {
     text-transform: uppercase;
-    padding-top: 4rem;
-    margin-bottom: 1.25rem;
+    padding-top: 6.5%;
+    margin-bottom: 2.5%;
 }
 
 footer p {
@@ -308,7 +303,7 @@ footer p {
 .copyright {
     background: #000;
     text-align: center;
-    padding: 0.125rem 0;
+    padding: 0.5% 0;
 }
 
 .copyright p {
