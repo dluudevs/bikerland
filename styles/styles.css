@@ -293,7 +293,7 @@ h1 {
     }
 
     .galleryText button {
-        width: 35%;
+        width: 130px;
         padding: 8px 10px;
         margin-top: 10px;
     }
@@ -302,7 +302,7 @@ h1 {
 section button {
     color: #f2a11c;
     background: #222;
-    width: 30%;
+    width: 125px;
 }
 
 /* BLOG SECTION */
@@ -330,7 +330,7 @@ section button {
 }
 
 .blogText button {
-    width: 17%;
+    width: 125px;
     margin-top: 1px;
 }
 
@@ -430,8 +430,8 @@ section button {
     }
 
     .blogText button {
-        padding: 1% 0.5%;
-        width: 40%;
+        padding: 8px 10px;
+        width: 130px;
         margin-top: 1%;
     }
 }
