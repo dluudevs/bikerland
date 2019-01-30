@@ -24,6 +24,7 @@
                         <li><a href="#blog">Blog</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <li><i class="fas fa-bars"></i></li>
+                        <!-- i think you would need to use jquery to make this accssible when it "appears", otherwise screenreaders would pick this up when this li isnt part of the content until a specific breakpoint -->
                     </ul>
                 </div>
             </nav>
@@ -47,9 +48,10 @@
     <!-- main starts -->
     <main>
         <!-- About section -->
-        <section id="about">
+        <section id="about" class="about">
             <div class="gallery clearfix">
-                <div class="galleryText">
+                <img src="assets/image7.jpg" alt="zoom in of foot on pedal" class="imageTop">
+                <div class="galleryText textTop">
                     <h2>About Us</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor a elementum
                         eleifend.
@@ -58,11 +60,10 @@
                         Vestibulum vitae tincidunt sem, a blandit sem. Quisque interdum orci.</p>
                     <button>read more</button>
                 </div>
-                <img src="assets/image7.jpg" alt="zoom in of foot on pedal">
             </div>
-            <div class="gallery clearfix">
-                <img src="assets/image8.jpg" alt="black bike in dim lighting">  
-                <div class="galleryText">
+            <div class="gallery galleryBottom clearfix">
+                <img src="assets/image8.jpg" alt="black bike in dim lighting" class="imageBottom">  
+                <div class="galleryText textBottom">
                     <h2>Our mission</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor a elementum
                         eleifend.
@@ -73,7 +74,7 @@
                 </div>
         </section>
         <!-- Meet Alissa (blog) section -->
-        <section id="blog">
+        <section id="blog" class="blog">
             <div class="fullbleed clearfix">
                 <div class="imgContainer">
                     <img src="assets/image6.jpg" alt="woman in red jacket pedaling bike">
@@ -97,7 +98,7 @@
             </div>
         </section>
         <!-- section with three icons -->
-        <section id="midSection">
+        <section id="midSection" class="midSection">
             <div class="fullbleed">
                 <div class="wrapper">
                     <ul>
@@ -124,7 +125,7 @@
             </div>
         </section>
         <!-- the gram section -->
-        <section id="gram">
+        <section id="gram" class="gram">
             <div class="wrapper">
                 <h2>The Gram</h2>
                 <div class="gramWrapper clearfix">
@@ -136,7 +137,7 @@
         </section>
     </main>
     <!-- footer  -->
-    <footer id=#contact>
+    <footer id=#contact class="contact">
         <div class="fullbleed">
             <div class="wrapper clearfix">
                 <ul>
