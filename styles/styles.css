@@ -4,11 +4,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-
-/* Presentation */
-
-/*  subscribe button SPILLING - issue. highlighted HTML and scrolled entire document - as if there is as scroll it means content is spilling */
-/* proud of my design choice with meet alicia */
+.visuallyhidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
 /***** GENERAL STYLES ******/
 
@@ -61,17 +57,21 @@ footer li,
 .midSection li {
     display: inline-block;
     margin-left: 3%;
+}
+.navList li a,
+footer li a,
+.midSection li a{
     border-bottom: 1px solid transparent;
 }
 
-nav a:hover,
-footer a:hover,
-.midSection a:hover {
+nav li a:hover,
+footer li a:hover,
+.midSection li a:hover {
     border-bottom: 1px solid #f2a11c;
 }
 
-nav li,
-footer li,
+nav a,
+footer a,
 .midSection a {
     transition: border 0.25s ease-in;
 }
@@ -107,7 +107,6 @@ h1 {
     padding-top: 26vh;
 }
 
-
 .navList .burger{
     display: none;
 }
@@ -128,12 +127,10 @@ h1 {
     
     .navIcons li{
         display: inline-block;
-        position: static;
     }
 }
 
 @media (max-width: 801px){
-   
     header h1 {
         padding-top: 29vh;
     }
@@ -176,8 +173,8 @@ h1 {
     }
     
     header h1{
-        font-size: 4rem;
-        padding-top: 31vh;
+        font-size: 3.75rem;
+        padding-top: 26.5vh;
     }
 }
 
@@ -205,13 +202,13 @@ h1 {
     padding: 8% 5% 0 8%; 
 }
 
+.gallery img {
+    display: block;
+}
+
 .galleryText p {
     line-height: 1.45;
     margin-top: 0;
-}
-
-.gallery img {
-    display: block;
 }
 
 .textTop,
@@ -248,7 +245,7 @@ h1 {
     }
 }
 
-@media (max-width: 732px){
+@media (max-width: 782px){
     .galleryText {
         padding: 1% 0 0 1%;
     }
@@ -312,9 +309,7 @@ section button {
 
 .blog .fullbleed{
     background: #f4f4f4;
-    padding: 7%;
-    padding-right: 6%;
-    min-width: 100%;
+    padding: 7% 6% 7% 7%;
 }
 
 .imgContainer {
@@ -381,6 +376,7 @@ section button {
     .blogText p {
         margin: 0;
     }
+
     .imgContainer {
         width: calc(33.75% - 0.75%);
     }
@@ -390,13 +386,9 @@ section button {
     .blog .fullbleed {
         padding: 7% 1%;
     }
+
     .imgContainer {
         width: 100%;
-    }
-
-    .imgContainer img {
-        width: 40%;
-        margin: 0 auto;
     }
 
     .blogText {
@@ -408,6 +400,11 @@ section button {
     .blogText p {
         max-width: 50%;
         margin: 1.5% auto;
+    }
+
+    .imgContainer img {
+        width: 40%;
+        margin: 0 auto;
     }
 }
 
@@ -466,19 +463,19 @@ section button {
 }
 
 @media (max-width: 485px){
-    
     .midSection .fullbleed {
-        background-position: left 850px center;
+        background-position: left 760px center;
     }
 
     .midSection ul {
         padding: 30% 0;
     }
+
     .midSection li {
         display: block;
         font-size: 1rem
     }
-    
+
     .midSection li i {
         font-size: 2rem;
     }
@@ -486,7 +483,6 @@ section button {
     .midSection li:nth-child(n + 2){
         margin-top: 10%
     }
-
 }
 
 /*  THE GRAM SECTION */
@@ -511,11 +507,10 @@ section button {
 }
 
 @media (max-width: 691px){
-    
     .wrapper {
         min-width: 92%;
     }
-
+    
     .gram h2 {
         margin: 12% 0;
     }
@@ -532,7 +527,6 @@ section button {
     .gram img {
         width: calc((100% - 4%) / 2);
     }
-
 }
 
 /*  FOOTER STYLES */
@@ -637,6 +631,15 @@ footer {
         text-transform: none;
         padding-left: 20%;
     }
+
+    form input::placeholder {
+        opacity: 1;
+    }
+
+    .stayUpdated button {
+        margin-bottom: 4%;
+    }
+
 }
 
 @media (max-width: 571px){
