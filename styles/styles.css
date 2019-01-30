@@ -5,6 +5,11 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 
+/* Presentation */
+
+/*  subscribe button SPILLING - issue. highlighted HTML and scrolled entire document - as if there is as scroll it means content is spilling */
+/* proud of my design choice with meet alicia */
+
 /***** GENERAL STYLES ******/
 
 html {
@@ -59,15 +64,15 @@ footer li,
     border-bottom: 1px solid transparent;
 }
 
-nav li:hover,
-footer li:hover,
-.midSection li:hover {
+nav a:hover,
+footer a:hover,
+.midSection a:hover {
     border-bottom: 1px solid #f2a11c;
 }
 
 nav li,
 footer li,
-.midSection li {
+.midSection a {
     transition: border 0.25s ease-in;
 }
 
@@ -92,7 +97,6 @@ header .fullbleed {
     background-size: cover;
     background-position: 55% 0%;
     min-height: 100vh;
-    /* accomodates for items in the header when the page gets too small */
     position: relative;
 }
 
@@ -104,7 +108,7 @@ h1 {
 }
 
 
-.navList .fa-bars{
+.navList .burger{
     display: none;
 }
 
@@ -129,8 +133,17 @@ h1 {
 }
 
 @media (max-width: 801px){
+   
+    header h1 {
+        padding-top: 29vh;
+    }
+
     .navIcons {
         display: none;
+    }
+
+    .navList {
+        padding-top: 4%;
     }
     
     .navList ul{
@@ -142,11 +155,11 @@ h1 {
     }
     
     .navList li:last-child{
-        padding-right: 3%;
+        padding-right: 4%;
         font-size: 2rem;
     }
     
-    .navList .fa-bars{
+    .navList .burger{
         display: block;
     }
     
@@ -157,8 +170,14 @@ h1 {
 }
 
 @media (max-width: 491px){
-    h1{
+    header .fullbleed {
+        background: url('../assets/image1Mobile.jpg');
+        background-size: cover;
+    }
+    
+    header h1{
         font-size: 4rem;
+        padding-top: 31vh;
     }
 }
 
@@ -226,7 +245,6 @@ h1 {
 @media (max-width: 822px){
     .galleryText {
         padding: 4% 1% 0 2%;
-        /* line-height: 1.3; */
     }
 }
 
@@ -291,8 +309,6 @@ section button {
 }
 
 /* BLOG SECTION */
-
-/* is this correct in desktop state????? */
 
 .blog .fullbleed{
     background: #f4f4f4;
@@ -407,19 +423,19 @@ section button {
 
 @media (max-width: 616px){
     .imgContainer img {
-        width: 90%;
+        width: 85%;
     }
 
     .blogText p {
-        width: 100%;
+        width: 90%;
         text-align: left;
-        margin: 0;
-        margin-left: 5%;
-        padding: 0 1%;
+        padding-right: 3%;
     }
 
     .blogText button {
         padding: 1% 0.5%;
+        width: 40%;
+        margin-top: 1%;
     }
 }
 
@@ -449,6 +465,30 @@ section button {
     margin: 0;
 }
 
+@media (max-width: 485px){
+    
+    .midSection .fullbleed {
+        background-position: left 850px center;
+    }
+
+    .midSection ul {
+        padding: 30% 0;
+    }
+    .midSection li {
+        display: block;
+        font-size: 1rem
+    }
+    
+    .midSection li i {
+        font-size: 2rem;
+    }
+
+    .midSection li:nth-child(n + 2){
+        margin-top: 10%
+    }
+
+}
+
 /*  THE GRAM SECTION */
 
 .gram h2 {
@@ -470,6 +510,31 @@ section button {
     width: calc((100% - 6%) / 3);
 }
 
+@media (max-width: 691px){
+    
+    .wrapper {
+        min-width: 92%;
+    }
+
+    .gram h2 {
+        margin: 12% 0;
+    }
+
+    .gram img:last-child{
+        display: none;
+    }
+
+    .gram .gramWrapper img:nth-child(2){
+        margin: 0;
+        margin-left: 4%;
+    }
+
+    .gram img {
+        width: calc((100% - 4%) / 2);
+    }
+
+}
+
 /*  FOOTER STYLES */
 
 footer {
@@ -483,11 +548,12 @@ footer {
 }
 
 .contactInfo {
-    width: 51%;
+    width: 30%;
 }
 
 .stayUpdated {
-    width: 49%;
+    width: 70%;
+    padding-left: 26.5%;
 }
 
 .stayUpdated input[type="text"],
@@ -509,6 +575,104 @@ footer {
     color: #222;
     padding: 0.9% 0;
     border: 2px solid transparent;
+}
+
+@media (max-width: 995px){
+    .stayUpdated {
+       padding-left: 15%; 
+    }
+}
+
+@media (max-width: 934px){
+    .contactInfo, .stayUpdated {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 3%;
+    }
+
+    footer form {
+        padding-left: 24%;
+    }
+
+    .stayUpdated input[type="text"]{
+        width: 50%;
+    }
+
+    .stayUpdated button{
+        width: 20%;
+        padding-top: 0.85%;
+    }
+}
+
+@media (max-width: 630px){
+    .stayUpdated input[type="text"],
+    .stayUpdated button {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    footer form {
+        padding: 0;
+    }
+
+    footer ul li {
+        padding: 0;
+        margin: 0;
+        float: left;
+        padding-left: 18%;
+    }
+
+    footer ul li:first-child{
+        padding-left: 0;
+    }
+    footer ul li:last-child {
+        float: right;
+    }
+}
+
+@media (max-width: 602px){
+    footer ul li {
+        text-transform: none;
+        padding-left: 20%;
+    }
+}
+
+@media (max-width: 571px){
+    footer ul li{
+        padding-left: 19%;
+    }
+}
+
+@media (max-width: 529px){
+    footer ul li{
+        padding-left: 18%;
+    }
+}
+
+@media (max-width: 499px){
+    footer ul li{
+        padding-left: 17%;
+    }
+}
+
+@media (max-width: 467px){
+    footer ul li {
+        padding-left: 16%;
+    }
+}
+
+@media (max-width: 441px){
+    footer ul li{
+        padding-left: 15%;
+    }
+}
+
+@media (max-width: 417px){
+    footer ul li{
+        padding-left: 14%;
+    }
 }
 
 footer h2 {
