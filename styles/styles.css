@@ -107,6 +107,7 @@ h1 {
     padding-top: 26vh;
 }
 
+
 .navList .burger{
     display: none;
 }
@@ -686,7 +687,7 @@ footer {
     }
 }
 
-@media (max-width: 376px){
+@media (max-width: 359px){
     footer ul li {
         padding-left: 9%;
     }
